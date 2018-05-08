@@ -11,13 +11,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'scripts/test.sh'
+                bat 'test.sh'
             }
         }
         stage('Deliver') {
             steps {
-                bat '/scripts/deliver.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                bat 'deliver.sh'
+                
                 
             }
         }
